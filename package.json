@@ -1,0 +1,25 @@
+{
+  "name": "homebridge-hunterdouglas",
+  "version": "0.0.1",
+  "description": "Plugin for controlling Hunter Douglas blinds",
+  "license": "MIT",
+  "keywords": [
+    "homebridge-plugin",
+    "homebridge-hunterdouglas",
+    "hunterdouglas",
+    "hunter",
+    "douglas"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/exphat/homebridge-hunterdouglas.git"
+  },
+  "bugs": {
+    "url": "http://github.com/exphat/homebridge-hunterdouglas/issues"
+  },
+  "engines": {
+    "node": ">=6.3.0",
+    "homebridge": ">=0.2.0",
+    "node-hunterdouglas": ">=0.0.1"
+  }
+}
