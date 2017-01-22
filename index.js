@@ -58,7 +58,7 @@ function HunterDouglasAccessory(log, device, hd, platform) {
 
 HunterDouglasPlatform.prototype = {
 
-  lastUpdated = new Date();
+  lastUpdated: new Date(),
 
   accessories: function (callback) {
     this.log("Fetching Hunter Douglas Blinds...");
@@ -81,7 +81,7 @@ HunterDouglasPlatform.prototype = {
 
       callback(foundAccessories);
     });
-  }
+  },
 
   updateValues: function () {
     let that = this;
@@ -101,7 +101,7 @@ HunterDouglasPlatform.prototype = {
         }
       });
     });
-  },
+  }
 };
 
 HunterDouglasAccessory.prototype = {

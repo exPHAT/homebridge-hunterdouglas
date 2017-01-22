@@ -1,6 +1,6 @@
 {
   "name": "homebridge-hunterdouglas",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Plugin for controlling Hunter Douglas blinds",
   "license": "MIT",
   "keywords": [
