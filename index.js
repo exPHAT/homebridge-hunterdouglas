@@ -43,12 +43,13 @@ function HunterDouglasPlatform(log, config) {
   }
 }
 
-function HunterDouglasAccessory(log, device, hd) {
+function HunterDouglasAccessory(log, device, hd, platform) {
   this.id = UUIDGen.generate(device.name);
   this.name = device.name;
   this.blinds = device.blinds;
   this.hd = hd;
   this.log = log;
+  this.platform = platform;
 
   this.currentPosition = this.blinds[0].position;
   this.targetPosition = this.blinds[0].position;
@@ -56,6 +57,8 @@ function HunterDouglasAccessory(log, device, hd) {
 }
 
 HunterDouglasPlatform.prototype = {
+
+  lastUpdated = new Date();
 
   accessories: function (callback) {
     this.log("Fetching Hunter Douglas Blinds...");
@@ -72,13 +75,33 @@ HunterDouglasPlatform.prototype = {
       Object.keys(blinds).forEach(function (key) {
         let blind = blinds[key];
 
-        var accessory = new HunterDouglasAccessory(that.log, blind, blindController);
+        var accessory = new HunterDouglasAccessory(that.log, blind, blindController, that);
         foundAccessories.push(accessory);
       });
 
       callback(foundAccessories);
     });
   }
+
+  updateValues: function () {
+    let that = this;
+
+    blindController.setup().then(function (blinds) {
+      Object.keys(blinds).forEach(function (key) {
+        let blind = blinds[key];
+
+        let id = UUIDGen.generate(blind.name);
+        let index = that.accessories.map(a => a.id).indexOf(id);
+        if (index !== -1) {
+          let accessory = that.accessories[index];
+
+          accessory.currentPosition = blind.blinds[0].position;
+          accessory.targetPosition = blind.blinds[0].position;
+          accessory.positionState = 2; // Stopped
+        }
+      });
+    });
+  },
 };
 
 HunterDouglasAccessory.prototype = {

@@ -19,7 +19,9 @@
   },
   "engines": {
     "node": ">=6.3.0",
-    "homebridge": ">=0.2.0",
+    "homebridge": ">=0.2.0"
+  },
+  "dependencies": {
     "node-hunterdouglas": ">=0.0.1"
   }
 }
