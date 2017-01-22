@@ -2,7 +2,7 @@
 
 Control your Hunter Douglas blinds with [homebridge](https://github.com/nfarina/homebridge).
 
-GIF HERE
+![](http://i.giphy.com/26gsoGRBXatXJdPAQ.gif)
 
 ## Installation
 
