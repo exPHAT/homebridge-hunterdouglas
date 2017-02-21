@@ -24,7 +24,7 @@ Add this plugin to your homebridge configuration as a platform.
 ]
 ```
 
-The `ip_address` field represents the IP address of your base station, you can find it by using the PowerView app and navigating to settings.
+The `ip_address` field represents the IP address of your base station, you can find it by using the "Platinum Shade Controller" app and navigating to settings.
 
 You can also specify `port` if somehow you've changed the port of the base station.
 
