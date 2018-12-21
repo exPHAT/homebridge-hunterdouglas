@@ -1,4 +1,4 @@
-// HunterDouglas PowerView blins plugin for HomeBridge
+// HunterDouglas Platinum Shades plugin for HomeBridge
 //
 // Remember to add platform to config.json. Example:
 // "platforms": [
@@ -10,7 +10,7 @@
 //     }
 // ],
 //
-// If you do not know the IP address of your Bridge, open the PowerView app
+// If you do not know the IP address of your Bridge, open the "Platinum Shade Controller" app
 // and navgate to Settings within the app and look for "Bridge IP".
 //
 //
